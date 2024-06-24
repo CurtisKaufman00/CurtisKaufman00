@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+/* Main colors */
+/* Bluish gray: #2e3842; */
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1859,7 +1863,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #588157;
 		}
 
 	select {
@@ -1956,7 +1960,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #588157;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2187,10 +2191,10 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
-		ul.actions li {
+		/* ul.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
-		}
+		} */
 
 		ul.actions.special {
 			-moz-justify-content: center;
@@ -2201,9 +2205,9 @@ input, select, textarea {
 			margin-left: 0;
 		}
 
-			ul.actions.special li:first-child {
+			/* ul.actions.special li:first-child {
 				padding-left: 0;
-			}
+			} */
 
 		ul.actions.stacked {
 			-moz-flex-direction: column;
@@ -2817,7 +2821,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #588157;
 			color: #c8ece9;
 		}
 
@@ -2871,7 +2875,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: #588157;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2887,7 +2891,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #588157;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -3351,7 +3355,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #588157;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3706,9 +3710,15 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#banner {
+			/* #banner {
 				padding: 7em 3em 5em 3em ;
 				height: auto;
+				min-height: 0;
+			} */
+
+			#banner {
+				padding: 7em 3em 5em 3em ;
+				height: 100vh;
 				min-height: 0;
 			}
 
@@ -3997,3 +4007,93 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+	 /* Style for the circular div exit button for calendy widget */
+	 .circle-div {
+		width: 28px; /* Adjust the size of the circle as needed */
+		height: 28px; /* Keep width and height the same for a perfect circle */
+		background-color: #ED4933; /* Color of the circular div */
+		border-radius: 50%; /* Creates a circular shape */
+		top: 50%; /* Position in the middle vertically */
+		right: 10px; /* Adjust the distance from the right edge */
+		transform: translateY(50%); /* Center vertically using translate */
+		align-self: flex-end;
+		z-index: 1000;
+	}
+
+	 /* Style for the container div for calendy widget */
+	.popup-content {
+		position: relative;
+	}
+
+	@media screen and (min-width: 391px) {
+	  #calendy{
+	    min-width:320px;
+		display: flex;
+        justify-content: center; /* Horizontally center child elements */
+	  }
+	}
+
+	/* For desktop*/
+	@media screen and (min-width: 821px) {
+		#calendyXbuttonPosition {	
+		  flex-basis: 83%;
+		}
+	}
+
+	/* For desktop and iPad mini*/
+	@media screen and (min-width: 768px) {
+		#popupContainer {	
+			display: block;
+			top: 0px;
+			z-index: 1000;
+		}
+
+		#calendyXbuttonPosition {	
+		  flex-basis: 90%;
+		}
+	}
+
+	/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+	@media only screen and (max-width: 767px) {
+	  #popupContainer {	
+	    display: block;
+		position: absolute;
+		top: 50px;
+		z-index: 1000;
+	  }
+
+	  #calendyXbuttonPosition {	
+		flex-basis: 99%;
+	  }
+	}
+
+	/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+	@media only screen and (max-width: 390px) {
+	  #calendy{
+	    width:300px
+	  }
+	  #popupContainer {	
+		display: block;
+		position: absolute;
+		top: 50px;
+		z-index: 1000;
+	  }
+  	}
+
+	/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+	@media only screen and (max-width: 360px) {
+	  #calendy{
+	    width:270px
+	  }
+	}
+
+
+	/* Page Zero: Services */
+
+	#servicesContainer > div {
+		width:300px;
+		margin: 10px;
+		text-align: center;
+		font-size: 16px;
+	  }
